@@ -1,9 +1,15 @@
+import { Trivia } from "./models/TriviaModel.js"
 import { Value } from "./models/Value.js"
 import { EventEmitter } from "./utils/EventEmitter.js"
 import { isValidProp } from "./utils/isValidProp.js"
 import { loadState } from "./utils/Store.js"
 
+
 class ObservableAppState extends EventEmitter {
+
+  /** @type {import('./models/TriviaModel.js').Trivia[]} */
+  trivias = []
+
   page = ''
 
   /** @type {import('./models/Value.js').Value[]} */
